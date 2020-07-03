@@ -130,7 +130,12 @@ USE_TZ = True
 
 
 
+<<<<<<< HEAD
 
+=======
+PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
+STATIC_ROOT = path.join(PROJECT_ROOT, 'static').replace('\\','/')
+>>>>>>> 1a916abb3c8fb7aa98d86aafcfdd1d0a2e49ab60
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
