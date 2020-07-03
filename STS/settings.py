@@ -25,7 +25,7 @@ SECRET_KEY = '%9wc_*4mmq=9af=2zw9e0*--9290p!j2(ds-nuohb8hm3nzju9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [sts-a.mongo.cosmos.azure.com]
 
 
 # Application definition
@@ -78,7 +78,13 @@ WSGI_APPLICATION = 'STS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'STS2',
+        'NAME': 'database',
+        'USERNAME': 'sts-a',
+        'HOST': 'mongodb://sts-a:izOY2OwChdmuLxTfWRtxOvClCaRQV3UN91fyMAjrkVnMfY5bIJUsrUKHLstu4Yzoagg2xiFcPny49p9xdd45uA==@sts-a.mongo.cosmos.azure.com:10255/database?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@sts-a@',
+        'PASSWORD': 'izOY2OwChdmuLxTfWRtxOvClCaRQV3UN91fyMAjrkVnMfY5bIJUsrUKHLstu4Yzoagg2xiFcPny49p9xdd45uA==',
+        'SSL': 'true',
+
+
     }
 }
 
